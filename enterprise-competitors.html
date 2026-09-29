@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enterprise Competitors — Botanie Soap vs. Bradford &amp; Vanguard | SpearPoint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#FFFFFF; --band:#EEF0E2; --ink:#1D3853; --ink-soft:#4C6478; --ink-faint:#8B98A6; --line:#E1E1D2;
+    --accent:#F1735C; --accent-soft:#FCE7E2;
+    --client:#4DB859; --client-soft:#E5F5E8;
+    --comp1:#F1735C; --comp2:#1D3853;
+    --amber:#A9791F; --amber-soft:#FBF3E0;
+    --radius:12px; --shadow:0 1px 2px rgba(29,56,83,.05), 0 6px 18px -10px rgba(29,56,83,.14);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--white); color:var(--ink); font-family:'Open Sans',system-ui,sans-serif; font-variant-numeric:tabular-nums; -webkit-font-smoothing:antialiased; line-height:1.5;}
+  .wrap{max-width:1200px;margin:0 auto;padding:44px 26px;}
+  .band{background:var(--band);}
+  .band-white{background:var(--white);}
+  header.top .wrap{padding-top:30px;padding-bottom:0;}
+  .logo{height:32px;display:block;margin-bottom:16px;}
+  header.top{border-bottom:1px solid var(--line);}
+  .top-row{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;}
+  .top-meta{font-size:12.5px;color:var(--ink-faint);white-space:nowrap;padding-top:4px;}
+  .kicker{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:800;margin-bottom:8px;}
+  h1{font-size:30px;line-height:1.2;margin:0 0 10px;font-weight:800;letter-spacing:-.01em;}
+  .sub{color:var(--ink-soft);font-size:14.5px;max-width:640px;margin-bottom:14px;}
+  .legend-pills{display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;}
+  .legend-pills .lp{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--ink);}
+  .legend-pills .sw{width:11px;height:11px;border-radius:3px;}
+
+  .nav-tabs{display:flex;gap:4px;margin-top:22px;}
+  .nav-tabs a{font-size:13px;font-weight:700;color:var(--ink-soft);text-decoration:none;padding:11px 18px;border-bottom:3px solid transparent;}
+  .nav-tabs a.active{color:var(--ink);border-bottom-color:var(--accent);}
+  .nav-tabs a:hover{color:var(--ink);}
+
+  h2{font-size:24px;font-weight:800;margin:0 0 8px;letter-spacing:-.01em;}
+  .section-desc{color:var(--ink-soft);font-size:13.5px;margin:0 0 22px;max-width:760px;}
+
+  .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .kpi{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:18px 18px 16px;box-shadow:var(--shadow);}
+  .kpi .label{font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-faint);font-weight:700;margin-bottom:9px;}
+  .kpi .value{font-size:30px;font-weight:800;letter-spacing:-.01em;color:var(--client);}
+  .kpi .value.neutral{color:var(--ink);}
+  .kpi .foot{margin-top:7px;font-size:12px;color:var(--ink-soft);}
+
+  .score-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .score-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px 16px;position:relative;}
+  .score-card.leader{border-color:var(--brandc);box-shadow:0 0 0 1px var(--brandc), var(--shadow);}
+  .score-card .rank-badge{position:absolute;top:16px;right:16px;font-size:10.5px;font-weight:700;color:var(--ink-faint);}
+  .score-card .brand-name{font-size:11px;font-weight:800;color:var(--brandc);margin-bottom:8px;}
+  .score-card .tag-client{display:inline-block;font-size:9px;font-weight:800;letter-spacing:.04em;background:var(--client-soft);color:var(--client);padding:2px 6px;border-radius:4px;margin-left:6px;vertical-align:middle;}
+  .score-card .score-num{font-size:32px;font-weight:800;line-height:1;}
+  .score-card .comp-row{display:grid;grid-template-columns:1fr 30px;gap:8px;align-items:center;font-size:10.5px;color:var(--ink-soft);margin:9px 0 0;}
+  .score-card .comp-track{height:5px;border-radius:3px;background:#ECEAE0;overflow:hidden;margin-top:3px;}
+  .score-card .comp-fill{height:100%;border-radius:3px;background:var(--brandc);}
+  .score-card .comp-val{font-size:10px;text-align:right;color:var(--ink-faint);}
+  .formula-note{font-size:12px;color:var(--ink-soft);background:#EDEDE1;border-radius:10px;padding:14px 16px;margin-top:16px;line-height:1.6;}
+
+  .bar-row{display:grid;grid-template-columns:150px 1fr 58px;align-items:center;gap:10px;margin:11px 0;}
+  .bar-row .name{font-size:13px;font-weight:700;}
+  .bar-track{height:11px;border-radius:6px;background:#E3E4D6;overflow:hidden;}
+  .bar-fill{height:100%;border-radius:6px;}
+  .bar-row .pct{font-size:13px;font-weight:700;text-align:right;}
+
+  .topic-row{margin:20px 0;}
+  .topic-row .t-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
+  .topic-row .t-name{font-size:14px;font-weight:800;}
+  .topic-row .t-vol{font-size:12.5px;color:var(--ink-soft);}
+  .stacked-bar{height:14px;border-radius:7px;overflow:hidden;display:flex;background:#E3E4D6;}
+  .stacked-bar span{height:100%;}
+  .topics-legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px;padding-top:16px;border-top:1px solid var(--line);}
+  .topics-legend .lp{display:flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--ink-soft);}
+  .topics-legend .sw{width:10px;height:10px;border-radius:3px;}
+
+  table.data-table{width:100%;border-collapse:collapse;font-size:13px;}
+  table.data-table thead th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:#fff;font-weight:700;padding:11px 12px;background:var(--ink);cursor:pointer;user-select:none;white-space:nowrap;}
+  table.data-table thead th:first-child{border-top-left-radius:8px;border-bottom-left-radius:8px;}
+  table.data-table thead th:last-child{border-top-right-radius:8px;border-bottom-right-radius:8px;}
+  table.data-table th.sorted::after{content:' \25BE';}
+  table.data-table td{padding:10px 12px;border-bottom:1px solid #F0EFE4;vertical-align:top;}
+  table.data-table tbody tr:hover td{background:#FAFAF3;}
+  table.data-table tr.client-row td{background:var(--client-soft);}
+  table.data-table tr.client-row:hover td{background:var(--client-soft);}
+  td.num{text-align:right;white-space:nowrap;}
+  td.strong{font-weight:700;}
+  .table-panel{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;}
+  .table-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;}
+  .search-box{padding:9px 13px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:13px;min-width:220px;background:#FCFCF7;}
+  .filter-chips{display:flex;gap:8px;flex-wrap:wrap;}
+  .chip-btn{font-family:inherit;font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:99px;border:1px solid var(--line);background:var(--white);color:var(--ink);cursor:pointer;}
+  .chip-btn.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .table-count{font-size:12.5px;color:var(--ink-faint);margin-bottom:10px;}
+  .badge{display:inline-block;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:99px;background:#EEECE2;color:var(--ink-soft);margin:2px 3px 2px 0;}
+  .badge-client{background:var(--client-soft);color:var(--client);}
+  .pagination{display:flex;justify-content:center;align-items:center;gap:6px;margin-top:18px;flex-wrap:wrap;}
+  .pagination button{font-family:inherit;font-size:12.5px;font-weight:700;padding:7px 13px;border-radius:8px;border:1px solid var(--line);background:var(--white);color:var(--ink);cursor:pointer;min-width:38px;}
+  .pagination button.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .pagination button:disabled{opacity:.4;cursor:not-allowed;}
+  .pagination .dots{padding:0 4px;color:var(--ink-faint);font-size:12.5px;}
+
+  .priority-grid{display:flex;flex-direction:column;gap:14px;}
+  .pp-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;}
+  .pp-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:12px;padding-bottom:12px;border-bottom:1px dashed var(--line);}
+  .pp-prompt{font-size:15.5px;font-weight:800;}
+  .pp-type{display:inline-block;font-size:10px;font-weight:700;color:var(--ink-soft);background:#EEECE2;padding:2px 9px;border-radius:99px;margin-left:8px;letter-spacing:.02em;}
+  .pp-status-wrap{display:flex;gap:6px;flex-wrap:wrap;}
+  .pp-status{font-size:12px;font-weight:800;padding:4px 12px;border-radius:99px;white-space:nowrap;}
+  .status-yes{background:var(--client-soft);color:var(--client);}
+  .status-no{background:var(--accent-soft);color:var(--accent);}
+  .pp-label{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-faint);font-weight:800;margin-bottom:4px;}
+  .pp-body{font-size:13px;color:var(--ink-soft);line-height:1.65;margin-top:4px;}
+
+  .reco-list{display:flex;flex-direction:column;gap:14px;}
+  .reco-item{background:var(--white);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;}
+  .reco-num{font-size:15px;font-weight:800;color:var(--accent);margin-right:4px;}
+  .reco-item h4{font-size:16px;margin:0 0 8px;font-weight:800;display:inline;}
+  .reco-tag{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.03em;padding:3px 10px;border-radius:99px;margin:8px 0 10px;background:var(--accent-soft);color:var(--accent);}
+  .reco-tag.gap{background:var(--client-soft);color:var(--client);}
+  .reco-desc{font-size:13.5px;color:var(--ink-soft);line-height:1.65;max-width:900px;display:block;}
+
+  footer{padding-top:22px;margin-top:10px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--ink-faint);}
+
+  @media(max-width:900px){ .score-row{grid-template-columns:repeat(2,1fr);} }
+  @media(max-width:800px){ .kpi-grid{grid-template-columns:1fr 1fr;} }
+  @media(max-width:560px){ .kpi-grid,.score-row{grid-template-columns:1fr;} .bar-row{grid-template-columns:110px 1fr 50px;} }
+</style>
+</head>
+<body>
+
+<header class="top band-white">
+  <div class="wrap">
+    <img class="logo" src="data:image/png;base64,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" alt="SpearPoint Marketing">
+    <div class="top-row">
+      <div>
+        <div class="kicker">AI Search Visibility Report</div>
+        <h1>Enterprise Competitors — Botanie Soap vs. Contract Manufacturers</h1>
+        <div class="sub">Botanie Soap tracked against Bradford (Bradford Soap Works) and Vanguard Soap — two enterprise-scale contract soap manufacturers — across AI Overviews, AI Mode, ChatGPT, Gemini and Perplexity citations. Source: SE Ranking · Competitor Research → AI Search.</div>
+        <div class="legend-pills" id="legendPills"></div>
+      </div>
+      <div class="top-meta">Generated <span id="genDate"></span> · Region: United States</div>
+    </div>
+    <div class="nav-tabs">
+      <a href="index.html">Overview</a>
+      <a href="enterprise-competitors.html" class="active">Enterprise Competitors</a>
+    </div>
+  </div>
+</header>
+
+<div class="band">
+  <div class="wrap">
+    <div class="kicker">Snapshot</div>
+    <h2>KPI Summary</h2>
+    <div class="kpi-grid" id="kpiGrid"></div>
+  </div>
+</div>
+
+<div class="band-white">
+  <div class="wrap">
+    <div class="kicker">Composite Score</div>
+    <h2>Overall AI Search Score</h2>
+    <div class="section-desc">Botanie Soap vs. Bradford and Vanguard Soap — two enterprise-scale contract manufacturers competing for the same B2B private-label and custom-manufacturing search intent.</div>
+    <div class="score-row" id="scoreGrid"></div>
+    <div class="formula-note">Composite = 45% enterprise topic citations (tracked AI Overview prompts on contract/private-label manufacturing, custom formulation &amp; syndet, bar soap category, and ingredients/sustainability terms) + 30% domain authority (Domain InLink Rank) + 25% AI engine breadth (of 5 tracked engines: AI Overview, AI Mode, ChatGPT, Gemini, Perplexity). Each component is scaled against the strongest brand in this set, so the top scorer on that component reads 100. Unlike the main Overview page, this score intentionally excludes Botanie's total (mostly consumer-facing) citation volume, since Bradford and Vanguard Soap were only tracked on B2B/enterprise terms — using the all-topics total would have overstated Botanie's enterprise-specific visibility.</div>
+  </div>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    <div class="kicker">Visibility Breakdown</div>
+    <h2>Share of AI Visibility</h2>
+    <div class="section-desc">Share of tracked AI citation volume across the 3 brands in this enterprise competitive set.</div>
+    <div id="shareBars"></div>
+  </div>
+</div>
+
+<div class="band-white">
+  <div class="wrap">
+    <div class="kicker">Head to Head</div>
+    <h2>Enterprise Topic Clusters — Head to Head</h2>
+    <div class="section-desc">Tracked AI Overview prompts in each topic cluster that cite Bradford or Vanguard Soap, counted from a live SE Ranking pull. Reliable monthly search-volume data was not available for most of these long-tail B2B queries, so bars reflect number of distinct tracked prompts rather than volume.</div>
+    <div id="topicsChart"></div>
+    <div class="topics-legend" id="topicsLegend"></div>
+  </div>
+</div>
+
+<div class="band">
+  <div class="wrap">
+    <div class="kicker" id="promptsKicker">Full Detail</div>
+    <h2>AI Search Prompts</h2>
+    <div class="section-desc">Every individual enterprise/B2B prompt pulled from SE Ranking's Competitor Research → AI Search, showing topic cluster, volume (where available), engine, and which brand is cited. Sort any column, search by prompt text, or page through all tracked prompts.</div>
+    <div class="table-panel">
+      <div class="table-toolbar">
+        <input class="search-box" id="promptsSearch" placeholder="Search prompts…">
+        <div class="filter-chips" id="promptsFilters"></div>
+      </div>
+      <div class="table-count" id="promptsTableCount"></div>
+      <table class="data-table" id="promptsTable"><thead></thead><tbody></tbody></table>
+      <div class="pagination" id="promptsPagination"></div>
+    </div>
+
+    <div style="margin-top:44px;">
+      <div class="kicker">Client Priority</div>
+      <h2>Priority Enterprise Prompts</h2>
+      <div class="section-desc">Real tracked AI Overview prompts where Botanie Soap is cited, showing monthly US search volume and whether Bradford and/or Vanguard Soap are cited in the same AI-generated answer.</div>
+      <div class="priority-grid" id="priorityGrid"></div>
+    </div>
+  </div>
+</div>
+
+<div class="band-white">
+  <div class="wrap">
+    <div class="kicker">Full Detail</div>
+    <h2>Citation Sources</h2>
+    <div class="section-desc">Every domain AI engines cited alongside these prompts — including botaniesoap.com itself, Bradford, Vanguard Soap, and third-party contract-manufacturing directories, industry publishers, and adjacent brands. Counted across 17 fully-captured AI Overview answers for enterprise/B2B manufacturing queries. Ranked by citation count.</div>
+    <div class="table-panel">
+      <div class="table-toolbar">
+        <input class="search-box" id="sourcesSearch" placeholder="Search domains…">
+        <div class="filter-chips" id="sourcesFilters"></div>
+      </div>
+      <div class="table-count" id="sourcesTableCount"></div>
+      <table class="data-table" id="sourcesTable"><thead></thead><tbody></tbody></table>
+      <div class="pagination" id="sourcesPagination"></div>
+    </div>
+  </div>
+</div>
+
+<div class="band-white">
+  <div class="wrap">
+    <div class="kicker">Action Plan</div>
+    <h2>Where Botanie Soap Can Improve</h2>
+    <div class="section-desc">Checked against the real tracked citation data above — each one flags whether Botanie already competes here or is ceding ground to Bradford and Vanguard Soap.</div>
+    <div class="reco-list" id="recoList"></div>
+
+    <footer>
+      <div>Counts reflect AI-generated answer citations pulled live from SE Ranking — Competitor Research → AI Search (leaderboard and prompts-by-target tools), plus Backlinks/Domain Overview for the domain-authority KPI. Search volumes are monthly, US, where available.</div>
+    </footer>
+  </div>
+</div>
+
+<script id="data-island" type="application/json">
+{"leaderboard":{"bs":{"name":"Botanie Soap","domain":"botaniesoap.com","rank":3,"brand_presence":224,"link_presence":1273,"topicVolume":15,"share_of_voice":0.1807,"domain_authority":52,"engine_breadth":5},"vg":{"name":"Vanguard Soap","domain":"vanguardsoap.com","rank":2,"brand_presence":45,"link_presence":58,"topicVolume":31,"share_of_voice":0.3735,"domain_authority":39,"engine_breadth":3},"bf":{"name":"Bradford","domain":"bradfordsoap.com","rank":1,"brand_presence":14,"link_presence":59,"topicVolume":37,"share_of_voice":0.4458,"domain_authority":50,"engine_breadth":3}},"scores":{"bs":{"overall":73.2,"components":{"topicVolume":40.5,"domainAuthority":100.0,"engineBreadth":100.0}},"vg":{"overall":75.2,"components":{"topicVolume":83.8,"domainAuthority":75.0,"engineBreadth":60.0}},"bf":{"overall":88.8,"components":{"topicVolume":100.0,"domainAuthority":96.2,"engineBreadth":60.0}}},"topics":[{"name":"Contract & Private-Label Manufacturing","bs":14,"vg":25,"bf":11},{"name":"Custom Formulation & Syndet","bs":1,"vg":1,"bf":5},{"name":"Bar Soap / Beauty Bar Category","bs":0,"vg":3,"bf":14},{"name":"Ingredients, Sourcing & Sustainability","bs":0,"vg":2,"bf":7}],"priority":[{"prompt":"soap manufacturer","vol":390,"vanguard":true,"bradford":false,"note":"Answer names Botanie Soap and Vanguard Soap as contract/private-label manufacturers, and The Soap Guy as a bulk wholesaler. Bradford is not cited on this broad category term."},{"prompt":"soap manufactures","vol":390,"vanguard":true,"bradford":false,"note":"Same answer family as \"soap manufacturer\" \u2014 Botanie and Vanguard Soap both cited; Bradford absent."},{"prompt":"manufacturer of soaps","vol":390,"vanguard":false,"bradford":false,"note":"Botanie cited; neither Bradford nor Vanguard appear in this specific answer variant."},{"prompt":"soaps manufacturer","vol":390,"vanguard":false,"bradford":false,"note":"Botanie cited; neither Bradford nor Vanguard appear in this specific answer variant."},{"prompt":"bar soap manufacture","vol":50,"vanguard":true,"bradford":true,"note":"All three brands cited together \u2014 direct three-way competitive overlap on this exact B2B term."},{"prompt":"bar soap manufacturing","vol":50,"vanguard":true,"bradford":true,"note":"All three brands cited together \u2014 direct three-way competitive overlap on this exact B2B term."},{"prompt":"custom soap manufacturing","vol":50,"vanguard":true,"bradford":true,"note":"All three brands cited together \u2014 direct three-way competitive overlap on this exact B2B term."},{"prompt":"custom soap manufacturer","vol":50,"vanguard":true,"bradford":false,"note":"Botanie and Vanguard Soap cited; Bradford not named in this answer."},{"prompt":"liquid soap manufacturer","vol":40,"vanguard":true,"bradford":false,"note":"Botanie and Vanguard Soap cited on liquid-specific manufacturing intent; Bradford absent."},{"prompt":"liquid soaps manufacturers","vol":20,"vanguard":true,"bradford":false,"note":"Botanie and Vanguard Soap cited; Bradford absent."},{"prompt":"soap contract manufacturing","vol":10,"vanguard":true,"bradford":true,"note":"Rich answer explicitly names Botanie, Vanguard Soap and Bradford Soap as example contract manufacturers, alongside Twincraft and Commonwealth Soap & Toiletries."},{"prompt":"contract soap manufacturer","vol":10,"vanguard":true,"bradford":false,"note":"Botanie and Vanguard Soap cited as examples; Bradford not named in this specific answer (though cited on the closely related \"soap contract manufacturing\" query)."},{"prompt":"organic soap manufacturers","vol":10,"vanguard":false,"bradford":false,"note":"Botanie cited; neither enterprise competitor appears on this organic-specific framing."},{"prompt":"soap manufacturing business","vol":10,"vanguard":false,"bradford":false,"note":"Botanie cited; neither enterprise competitor appears in this answer."},{"prompt":"syndet bar soap","vol":210,"vanguard":false,"bradford":false,"note":"Botanie cited via its dedicated syndet blog post. Neither Bradford nor Vanguard Soap \u2014 despite both offering syndet manufacturing \u2014 are cited on this high-volume educational query."}],"promptsTable":[["soap manufacturer","Contract & Private-Label Manufacturing",390,"AI Overview","bs"],["soap manufacturer","Contract & Private-Label Manufacturing",390,"AI Overview","vg"],["soap manufactures","Contract & Private-Label Manufacturing",390,"AI Overview","bs"],["soap manufactures","Contract & Private-Label Manufacturing",390,"AI Overview","vg"],["manufacturer of soaps","Contract & Private-Label Manufacturing",390,"AI Overview","bs"],["soaps manufacturer","Contract & Private-Label Manufacturing",390,"AI Overview","bs"],["bar soap manufacture","Contract & Private-Label Manufacturing",50,"AI Overview","bs"],["bar soap manufacture","Contract & Private-Label Manufacturing",50,"AI Overview","vg"],["bar soap manufacture","Contract & Private-Label Manufacturing",50,"AI Overview","bf"],["custom soap manufacturing","Contract & Private-Label Manufacturing",50,"AI Overview","bs"],["custom soap manufacturing","Contract & Private-Label Manufacturing",50,"AI Overview","vg"],["custom soap manufacturing","Contract & Private-Label Manufacturing",50,"AI Overview","bf"],["bar soap manufacturing","Contract & Private-Label Manufacturing",50,"AI Overview","bs"],["bar soap manufacturing","Contract & Private-Label Manufacturing",50,"AI Overview","vg"],["bar soap manufacturing","Contract & Private-Label Manufacturing",50,"AI Overview","bf"],["custom soap manufacturer","Contract & Private-Label Manufacturing",50,"AI Overview","bs"],["custom soap manufacturer","Contract & Private-Label Manufacturing",50,"AI Overview","vg"],["liquid soap manufacturer","Contract & Private-Label Manufacturing",40,"AI Overview","bs"],["liquid soap manufacturer","Contract & Private-Label Manufacturing",40,"AI Overview","vg"],["liquid soaps manufacturers","Contract & Private-Label Manufacturing",20,"AI Overview","bs"],["liquid soaps manufacturers","Contract & Private-Label Manufacturing",20,"AI Overview","vg"],["soap contract manufacturing","Contract & Private-Label Manufacturing",10,"AI Overview","bs"],["soap contract manufacturing","Contract & Private-Label Manufacturing",10,"AI Overview","vg"],["soap contract manufacturing","Contract & Private-Label Manufacturing",10,"AI Overview","bf"],["organic soap manufacturers","Contract & Private-Label Manufacturing",10,"AI Overview","bs"],["soap manufacturing business","Contract & Private-Label Manufacturing",10,"AI Overview","bs"],["contract soap manufacturer","Contract & Private-Label Manufacturing",10,"AI Overview","bs"],["contract soap manufacturer","Contract & Private-Label Manufacturing",10,"AI Overview","vg"],["syndet bar soap","Custom Formulation & Syndet",210,"AI Overview","bs"],["manufacturers of soap","Contract & Private-Label Manufacturing",null,"AI Overview","bf"],["soaps manufacturers","Contract & Private-Label Manufacturing",null,"AI Overview","bf"],["soap manufacturers usa","Contract & Private-Label Manufacturing",null,"AI Overview","bf"],["soap bar manufacturer","Contract & Private-Label Manufacturing",null,"AI Overview","bf"],["soap manufacturers in usa","Contract & Private-Label Manufacturing",null,"AI Overview","bf"],["custom soap manufacturing","Contract & Private-Label Manufacturing",null,"AI Overview","bf"],["bar soap manufacture","Contract & Private-Label Manufacturing",null,"AI Overview","bf"],["bar soap manufacturing","Contract & Private-Label Manufacturing",null,"AI Overview","bf"],["soap manufacturing companies","Contract & Private-Label Manufacturing",null,"AI Overview","bf"],["soap contract manufacturing","Contract & Private-Label Manufacturing",null,"AI Overview","bf"],["contract soap manufacturer usa","Contract & Private-Label Manufacturing",null,"AI Overview","bf"],["syndets","Custom Formulation & Syndet",null,"AI Overview","bf"],["syndet soap bars","Custom Formulation & Syndet",null,"AI Overview","bf"],["syndet soap brands","Custom Formulation & Syndet",null,"AI Overview","bf"],["syndet face wash","Custom Formulation & Syndet",null,"AI Overview","bf"],["bar soap formulation","Custom Formulation & Syndet",null,"AI Overview","bf"],["what is a beauty bar","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["beauty bar vs soap","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["types of bar soap","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["types of soap bars","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["types of bar soaps","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["kinds of bar soap","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["what is a beauty bar soap","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["different types of dove soap","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["what is the best bar soap for dry skin","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["what is the beauty bar","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["difference between soap and beauty bar","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["beauty bar definition","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["name bar soap brand","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["dove soap different types","Bar Soap / Beauty Bar Category",null,"AI Overview","bf"],["menthol soap","Ingredients, Sourcing & Sustainability",null,"AI Overview","bf"],["oil for skin and hair","Ingredients, Sourcing & Sustainability",null,"AI Overview","bf"],["oils for skin and hair","Ingredients, Sourcing & Sustainability",null,"AI Overview","bf"],["palm oil environment","Ingredients, Sourcing & Sustainability",null,"AI Overview","bf"],["palm oil environmental","Ingredients, Sourcing & Sustainability",null,"AI Overview","bf"],["ingredient trends 2022","Ingredients, Sourcing & Sustainability",null,"AI Overview","bf"],["is shea butter sustainable","Ingredients, Sourcing & Sustainability",null,"AI Overview","bf"],["soaps manufacturers","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["soap manufacturer","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["soap manufactures","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["soap manufacturers usa","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["soap bar manufacturer","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["custom soap manufacturer","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["soap manufacturers in usa","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["custom soap manufacturing","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["private label soap manufacturers usa","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["bar soap manufacture","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["bar soap manufacturing","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["soap manufacturing companies","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["liquid manufacturers","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["liquid soap manufacturer","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["liquid soap manufacturers","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["liquid soaps manufacturers","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["soap base manufacturers","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["soap contract manufacturing","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["hand soap manufacturers usa","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["soap pellets supplier","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["us soap corporation","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["contract soap manufacturer","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["soap production company","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["soap and detergent manufacturing companies","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["contract soap manufacturer usa","Contract & Private-Label Manufacturing",null,"AI Overview","vg"],["laundry bar soap formulation","Custom Formulation & Syndet",null,"AI Overview","vg"],["best moisturizing bar soap for dry skin","Bar Soap / Beauty Bar Category",null,"AI Overview","vg"],["bars of soaps","Bar Soap / Beauty Bar Category",null,"AI Overview","vg"],["best bar hand soap","Bar Soap / Beauty Bar Category",null,"AI Overview","vg"],["best ingredients for soap","Ingredients, Sourcing & Sustainability",null,"AI Overview","vg"],["composition of soap","Ingredients, Sourcing & Sustainability",null,"AI Overview","vg"]],"sources":[["botaniesoap.com","Client site",17,{"bs":17}],["vanguardsoap.com","Enterprise competitor",12,{"vg":12}],["cstsoap.com","B2B contract manufacturer (Commonwealth)",8,{"bs":8}],["twincraft.com","B2B contract manufacturer",7,{"bs":7}],["vermontsoap.com","Competitor (from Overview page)",6,{"bs":6}],["thomasnet.com","B2B supplier directory",6,{"bs":6}],["thesoapguy.com","Competitor (from Overview page)",5,{"bs":5}],["naturalsoapwholesale.com","B2B contract manufacturer (Adams)",5,{"bs":5}],["bradfordsoap.com","Enterprise competitor",5,{"bf":5}],["formulacorp.com","B2B private-label manufacturer",5,{"bs":5}],["modernsoapmaking.com","Industry education / blog",5,{"bs":5}],["oregonsoapcompany.com","Competitor (from Overview page)",4,{"bs":4}],["petrasoap.com","B2B contract manufacturer",4,{"bs":4}],["soapcreekmfg.com","B2B contract manufacturer",4,{"bs":4}],["youtube.com","Video / social",3,{"bs":3}],["expertmarketresearch.com","Market research publisher",3,{"bs":3}],["tyoemcosmetic.com","B2B contract manufacturer (overseas)",3,{"bs":3}],["wixysoap.com","B2B private-label manufacturer",2,{"bs":2}],["cloverfields.com","B2B contract manufacturer",2,{"bs":2}],["findmymanufacturer.com","B2B supplier directory",2,{"bs":2}],["zetwerk.com","B2B manufacturing marketplace",2,{"bs":2}],["elismanufacturing.com","B2B contract manufacturer",2,{"bs":2}],["halecosmeceuticals.com","B2B contract manufacturer",2,{"bs":2}],["idetaileyewear.com","Unrelated / adjacent citation",2,{"bs":2}],["hcpwellness.in","B2B contract manufacturer (overseas)",2,{"bs":2}],["healthwisepharma.com","B2B contract manufacturer (overseas)",2,{"bs":2}],["camlayindustries.com","B2B contract manufacturer",2,{"bs":2}],["dogchewnepal.com","Unrelated / adjacent citation",2,{"bs":2}],["oribionature.com","B2B contract manufacturer (overseas)",2,{"bs":2}],["retail-insider.com","Trade media",2,{"bs":2}],["chiroblock.com","Unrelated / adjacent citation",2,{"bs":2}],["craftbeautylab.com","Industry education / blog",2,{"bs":2}],["letstranzact.com","Industry education / blog",2,{"bs":2}],["ayolabs.com","Industry education / blog",2,{"bs":2}]]}
+</script>
+
+<script>
+const DATA = JSON.parse(document.getElementById('data-island').textContent);
+const LB = DATA.leaderboard;
+const BRAND = {
+  bs:{name:'Botanie Soap', color:'#4DB859', client:true},
+  vg:{name:'Vanguard Soap', color:'#F1735C'},
+  bf:{name:'Bradford', color:'#1D3853'},
+};
+const BRAND_ORDER = ['bs','vg','bf'];
+document.getElementById('genDate').textContent = new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+function fmt(n){ return Number(n).toLocaleString('en-US'); }
+function esc(s){ return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+document.getElementById('legendPills').innerHTML = BRAND_ORDER.map(k=>`<span class="lp"><span class="sw" style="background:${BRAND[k].color}"></span>${BRAND[k].name}${BRAND[k].client?' (client)':''}</span>`).join('');
+
+(function(){
+  const bs = LB.bs;
+  const bsScore = DATA.scores.bs.overall.toFixed(1);
+  const cards = [
+    {label:'Enterprise Topic Citations', value:fmt(bs.topicVolume), foot:`Tracked B2B/enterprise-manufacturing AI Overview prompts citing botaniesoap.com (of ${LB.bf.topicVolume} for Bradford, ${LB.vg.topicVolume} for Vanguard)`, neutral:true},
+    {label:'Citation Sources', value:'30+', foot:`Distinct domains co-cited across enterprise B2B manufacturing prompts (sampled)`},
+    {label:'AI Search Score', value:bsScore, foot:`0–100 composite vs. Bradford and Vanguard Soap — Botanie ranks #${LB.bs.rank} of 3 on enterprise/B2B terms`, neutral:true},
+    {label:'Domain Authority', value:bs.domain_authority, foot:`Domain InLink Rank (0–100 scale), highest of the 3 tracked brands`, neutral:true},
+  ];
+  document.getElementById('kpiGrid').innerHTML = cards.map(c=>`
+    <div class="kpi">
+      <div class="label">${c.label}</div>
+      <div class="value ${c.neutral?'neutral':''}">${c.value}</div>
+      <div class="foot">${c.foot}</div>
+    </div>`).join('');
+})();
+
+(function(){
+  const order = Object.entries(DATA.scores).sort((a,b)=>b[1].overall-a[1].overall);
+  const compLabels = {topicVolume:'Enterprise topic citations (45%)', domainAuthority:'Domain authority (30%)', engineBreadth:'Engine breadth (25%)'};
+  document.getElementById('scoreGrid').innerHTML = order.map(([k,sc],i)=>{
+    const b = BRAND[k];
+    return `<div class="score-card ${i===0?'leader':''}" style="--brandc:${b.color}">
+      <div class="rank-badge">#${i+1}</div>
+      <div class="brand-name">${b.name}${b.client?'<span class="tag-client">CLIENT</span>':''}</div>
+      <div class="score-num">${sc.overall.toFixed(1)}</div>
+      ${Object.entries(sc.components).map(([ck,cv])=>`
+        <div class="comp-row"><div>${compLabels[ck]}<div class="comp-track"><div class="comp-fill" style="width:${cv}%"></div></div></div><div class="comp-val">${cv.toFixed(0)}</div></div>`).join('')}
+    </div>`;
+  }).join('');
+})();
+
+(function(){
+  const order = Object.entries(LB).sort((a,b)=>b[1].share_of_voice-a[1].share_of_voice);
+  document.getElementById('shareBars').innerHTML = order.map(([k,v])=>{
+    const pct = v.share_of_voice*100;
+    return `<div class="bar-row"><div class="name">${BRAND[k].name}</div><div class="bar-track"><div class="bar-fill" style="width:${Math.max(pct,1)}%;background:${BRAND[k].color}"></div></div><div class="pct">${pct.toFixed(1)}%</div></div>`;
+  }).join('');
+})();
+
+(function(){
+  document.getElementById('topicsChart').innerHTML = DATA.topics.map(t=>{
+    const total = t.bs+t.vg+t.bf || 1;
+    return `<div class="topic-row">
+      <div class="t-top"><div class="t-name">${esc(t.name)}</div><div class="t-vol">${fmt(total)} tracked prompts</div></div>
+      <div class="stacked-bar">
+        ${BRAND_ORDER.map(k=>{
+          const pct = (t[k]/total)*100;
+          return pct>0 ? `<span style="width:${pct}%;background:${BRAND[k].color}" title="${BRAND[k].name}: ${t[k]} prompts"></span>` : '';
+        }).join('')}
+      </div>
+    </div>`;
+  }).join('');
+  document.getElementById('topicsLegend').innerHTML = BRAND_ORDER.map(k=>`<span class="lp"><span class="sw" style="background:${BRAND[k].color}"></span>${BRAND[k].name}</span>`).join('');
+})();
+
+function buildTable({containerId, searchId, paginationId, countId, columns, rows, pageSize=50, countLabel, filters, filtersContainerId, defaultSortCol=null, defaultSortDir=1}){
+  let activeFilter = filters ? filters[0].key : null;
+  let sortCol = defaultSortCol, sortDir = defaultSortDir, page = 1;
+  const table = document.getElementById(containerId);
+  const thead = table.querySelector('thead');
+  const tbody = table.querySelector('tbody');
+  thead.innerHTML = '<tr>'+columns.map((c,i)=>`<th data-i="${i}">${c.label}</th>`).join('')+'</tr>';
+  thead.querySelectorAll('th').forEach(th=>{
+    th.addEventListener('click', ()=>{
+      const i = +th.dataset.i;
+      if(sortCol===i) sortDir*=-1; else { sortCol=i; sortDir=1; }
+      thead.querySelectorAll('th').forEach(t=>t.classList.remove('sorted'));
+      th.classList.add('sorted');
+      render();
+    });
+  });
+  if(sortCol!==null){
+    const initialTh = thead.querySelectorAll('th')[sortCol];
+    if(initialTh) initialTh.classList.add('sorted');
+  }
+  let searchQ = '';
+  if(searchId) document.getElementById(searchId).addEventListener('input', e=>{ searchQ = e.target.value.trim().toLowerCase(); page=1; render(); });
+  if(filters && filtersContainerId){
+    const fc = document.getElementById(filtersContainerId);
+    fc.innerHTML = filters.map(f=>`<button class="chip-btn ${f.key===activeFilter?'active':''}" data-key="${f.key}">${f.label}</button>`).join('');
+    fc.querySelectorAll('.chip-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        activeFilter = btn.dataset.key;
+        fc.querySelectorAll('.chip-btn').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        page = 1; render();
+      });
+    });
+  }
+  function getFiltered(){
+    let data = rows;
+    if(filters && activeFilter){
+      const f = filters.find(x=>x.key===activeFilter);
+      if(f && f.test) data = data.filter(f.test);
+    }
+    if(searchQ) data = data.filter(r=>r.some(c=>String(c).toLowerCase().includes(searchQ)));
+    return data;
+  }
+  function render(){
+    let data = getFiltered().slice();
+    if(sortCol!==null){
+      data.sort((a,b)=>{
+        const av=a[sortCol], bv=b[sortCol];
+        const an=parseFloat(av), bn=parseFloat(bv);
+        let cmp;
+        if(!isNaN(an) && !isNaN(bn)) cmp = an-bn;
+        else cmp = String(av).localeCompare(String(bv));
+        return cmp*sortDir;
+      });
+    }
+    const totalPages = Math.max(1, Math.ceil(data.length/pageSize));
+    if(page>totalPages) page = totalPages;
+    const start = (page-1)*pageSize;
+    const pageRows = data.slice(start, start+pageSize);
+    tbody.innerHTML = pageRows.map(r=>{
+      const isClientRow = r._clientRow;
+      return `<tr class="${isClientRow?'client-row':''}">`+r.map((c,i)=>{
+        if(i==='_clientRow') return '';
+        const col = columns[i];
+        let display = c;
+        if(col.format) display = col.format(c);
+        return `<td class="${col.num?'num':''} ${col.strong?'strong':''}">${col.raw?display:esc(String(display))}</td>`;
+      }).join('')+'</tr>';
+    }).join('');
+    if(countId) document.getElementById(countId).textContent = `${fmt(data.length)} matching ${countLabel||'rows'} (of ${fmt(rows.length)} total tracked)${totalPages>1?` — page ${page} of ${totalPages}`:''}`;
+    if(paginationId){
+      const pag = document.getElementById(paginationId);
+      let pageBtns = [];
+      const addBtn = (label,p,disabled,active)=>pageBtns.push(`<button data-p="${p}" ${disabled?'disabled':''} class="${active?'active':''}">${label}</button>`);
+      addBtn('‹ Prev', page-1, page<=1, false);
+      const pushNum = (p)=>addBtn(String(p), p, false, p===page);
+      if(totalPages<=7){
+        for(let p=1;p<=totalPages;p++) pushNum(p);
+      } else {
+        pushNum(1);
+        if(page>3) pageBtns.push('<span class="dots">…</span>');
+        for(let p=Math.max(2,page-1); p<=Math.min(totalPages-1,page+1); p++) pushNum(p);
+        if(page<totalPages-2) pageBtns.push('<span class="dots">…</span>');
+        pushNum(totalPages);
+      }
+      addBtn('Next ›', page+1, page>=totalPages, false);
+      pag.innerHTML = pageBtns.join('');
+      pag.querySelectorAll('button').forEach(b=>{
+        b.addEventListener('click', ()=>{ page = +b.dataset.p; render(); });
+      });
+    }
+  }
+  render();
+}
+
+const promptRows = DATA.promptsTable.map(p=>{
+  const cited = BRAND[p[4]].name;
+  const row = [p[0], p[1], p[2]==null?'n/a':p[2], p[3], cited];
+  row._citedKey = p[4];
+  return row;
+});
+buildTable({
+  containerId:'promptsTable', searchId:'promptsSearch', paginationId:'promptsPagination', countId:'promptsTableCount', countLabel:'prompts',
+  columns:[{label:'Prompt'},{label:'Topic'},{label:'Vol/mo'},{label:'Engine'},{label:'Cited By'}],
+  rows: promptRows,
+  filters:[
+    {key:'all', label:'All', test:()=>true},
+    {key:'client', label:'Botanie cited', test:r=>r._citedKey==='bs'},
+    {key:'bradford', label:'Bradford cited', test:r=>r._citedKey==='bf'},
+    {key:'vanguard', label:'Vanguard cited', test:r=>r._citedKey==='vg'},
+  ],
+  filtersContainerId:'promptsFilters',
+  pageSize:50
+});
+
+const sourceRows = DATA.sources.map(s=>{
+  const isClient = s[0]==='botaniesoap.com';
+  const name = isClient ? `${esc(s[0])} <span class="badge badge-client">CLIENT SITE</span>` : esc(s[0]);
+  const alongside = Object.entries(s[3]).map(([k,v])=>`<span class="badge ${k==='bs'?'badge-client':''}">${BRAND[k] ? BRAND[k].name : k} (${v})</span>`).join(' ') || '—';
+  const row = [name, s[1], s[2], alongside];
+  row._clientRow = isClient;
+  row._brands = Object.keys(s[3]);
+  return row;
+});
+buildTable({
+  containerId:'sourcesTable', searchId:'sourcesSearch', paginationId:'sourcesPagination', countId:'sourcesTableCount', countLabel:'domains',
+  columns:[{label:'Domain',raw:true},{label:'Type / Note'},{label:'Citations',num:true},{label:'Cited Alongside',raw:true}],
+  rows: sourceRows,
+  filters:[
+    {key:'all', label:'All', test:()=>true},
+    {key:'botanie', label:'Cites Botanie', test:r=>r._brands.includes('bs')},
+    {key:'enterprise', label:'Cites Bradford or Vanguard', test:r=>r._brands.includes('bf')||r._brands.includes('vg')},
+  ],
+  filtersContainerId:'sourcesFilters',
+  pageSize:50,
+  defaultSortCol:2, defaultSortDir:-1
+});
+
+(function(){
+  document.getElementById('priorityGrid').innerHTML = DATA.priority.map(p=>`
+    <div class="pp-card">
+      <div class="pp-top">
+        <div><span class="pp-prompt">"${esc(p.prompt)}"</span><span class="pp-type">${esc(p.vol)}/mo</span></div>
+        <div class="pp-status-wrap">
+          <span class="pp-status ${p.vanguard?'status-yes':'status-no'}">Vanguard: ${p.vanguard?'Cited':'Not cited'}</span>
+          <span class="pp-status ${p.bradford?'status-yes':'status-no'}">Bradford: ${p.bradford?'Cited':'Not cited'}</span>
+        </div>
+      </div>
+      <div class="pp-label">AI Overview Answer</div>
+      <div class="pp-body">${esc(p.note)}</div>
+    </div>
+  `).join('');
+})();
+
+(function(){
+  const items = [
+    {
+      tag:'gap', title:'Bradford dominates the "Bar Soap / Beauty Bar Category" cluster — Botanie has zero presence',
+      desc:`Bradford is cited on 14 of the tracked bar-soap/beauty-bar education prompts (types of bar soap, beauty bar vs. soap, dove soap comparisons) while Botanie and Vanguard barely register. These are exactly the kind of broad, high-volume educational queries that feed into B2B buyer research. A category-education content hub on botaniesoap.com could close this gap.`
+    },
+    {
+      tag:'gap', title:'Bradford leads on ingredients, sourcing & sustainability messaging',
+      desc:`Bradford is cited on 7 tracked prompts about palm oil sourcing, shea butter sustainability, and ingredient trends — themes enterprise buyers care about when vetting a manufacturing partner. Botanie has no tracked presence here. Publishing sourcing/sustainability content framed for a B2B audience is a genuine content gap, not just a citation problem.`
+    },
+    {
+      tag:'existing', title:'Vanguard Soap slightly outranks Botanie on core "Contract & Private-Label Manufacturing" terms',
+      desc:`Vanguard is cited on 25 tracked prompts in this cluster vs. Botanie's 14 — despite Botanie having dedicated custom-manufacturing and contract-manufacturing pages. On the three-way overlap prompts ("bar soap manufacturing," "custom soap manufacturing," "soap contract manufacturing"), all three brands are already cited together, so this is a ranking/framing edge for Vanguard rather than missing content.`
+    },
+    {
+      tag:'gap', title:'"syndet bar soap" (210/mo) — Botanie is the only tracked brand cited, but neither enterprise competitor is either',
+      desc:`This is Botanie's single highest-volume enterprise-adjacent term, driven by its dedicated syndet blog post. Neither Bradford nor Vanguard Soap — despite both offering syndet manufacturing capabilities — appear in this answer. Reinforcing this page with an explicit "syndet manufacturer" B2B framing (see the Overview page's priority-prompt findings) would protect and extend an existing lead before Bradford or Vanguard catch up.`
+    },
+  ];
+  document.getElementById('recoList').innerHTML = items.map((it,i)=>`
+    <div class="reco-item">
+      <span class="reco-num">${i+1}</span><h4>${esc(it.title)}</h4>
+      <div><span class="reco-tag ${it.tag==='gap'?'gap':''}">${it.tag==='existing'?'Competitive edge to defend':'Genuine content gap'}</span></div>
+      <span class="reco-desc">${esc(it.desc)}</span>
+    </div>
+  `).join('');
+})();
+</script>
+</body>
+</html>
